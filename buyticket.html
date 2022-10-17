@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Start_template</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon/favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/icons.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+
+            <form class="form">
+
+                <h1>Колькулятор поездки</h1>
+
+                <div class="form__direction">
+                    <label for="time">Направление:</label>
+                    <select class="form__choosedirection" name="route" id="route">
+                        <option value="из точки A в точку B">из точки A в точку B</option>
+                        <option value="из точки B в точку A">из точки B в точку A</option>
+                        <option value="из точки A в точку B и обратно">из точки A в точку B и обратно</option>
+                    </select>
+                </div>
+
+                <div class="form__time">
+                    <label for="time1">Время отправки из точки А:</label>
+                    <select class="form__choosetime form__choosetime_1" name="time1" id="time1">
+                        <option value="18:00">18:00</option>
+                        <option value="18:30">18:30</option>
+                        <option value="18:45">18:45</option>
+                        <option value="19:00">19:00</option>
+                        <option value="19:15">19:15</option>
+                        <option value="21:00">21:00</option>
+                    </select>
+
+                    <label for="time2">Время отправки из точки B:</label>
+                    <select class="form__choosetime form__choosetime_2" name="time2" id="time2">
+                        <option value="18:30">18:30</option>
+                        <option value="18:45">18:45</option>
+                        <option value="19:00">19:00</option>
+                        <option value="19:15">19:15</option>
+                        <option value="19:35">19:35</option>
+                        <option value="21:50">21:50</option>
+                        <option value="21:55">21:55</option>
+                    </select>
+                </div>
+
+                <div class="form__amount">
+                    <label for="num">Количество билетов:</label>
+                    <input class="form__chooseamount" id="num">
+                </div>
+
+                <button class="form__button">Посчитать</button>
+
+                <label for="result">Итоговые данные поездки:</label>
+                <textarea class="form__result" name="result" id="result"></textarea>
+
+            </form>
+
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

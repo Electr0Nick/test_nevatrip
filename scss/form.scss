@@ -1,0 +1,44 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    border: 1px solid #828282;
+    border-radius: 16px;
+    overflow: hidden;
+    &__direction {
+    }
+
+    &__choosedirection {
+    }
+
+    &__time {
+    }
+
+    &__choosetime {
+
+        &_1 {
+        }
+
+        &_2 {
+        }
+    }
+
+    &__amount {
+    }
+
+    &__chooseamount {
+    }
+
+    &__button {
+        width: 165px;
+        height: 44px;
+        border: 1px solid #CBA500;
+        border-radius: 20px;
+        background-color: #FED74B;
+        line-height: 44px;
+        &:hover {
+            background-color: #CBA500;
+        }
+    }
+}

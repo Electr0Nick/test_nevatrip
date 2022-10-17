@@ -1,10 +1,9 @@
 // ----------------------------------------------fonts----------------------------------------------
-// &display=swap
-@import url(https://fonts.googleapis.com/...&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:regular,700&display=swap);
 
 body {
-    font-family: Monda, sans-serif;
-    font-size: 16px;
+    font-family: "Open Sans", "Arial", sans-serif;
+    font-size: 14px;
     font-weight: regular;
     color: #000;
 }
@@ -18,11 +17,12 @@ body {
 
 // ----------------------------------------------container----------------------------------------------
 .container {
-    max-width: 1920px;
+    max-width: 1070px;
     width: 100%;
     margin: 0 auto;
+    padding: 0 17px;
 }
 
-// ----------------------------------------------import----------------------------------------------
-@import "header.scss";
-@import "footer.scss";
+@import "block.scss";
+@import "media.scss";
+@import "form.scss";

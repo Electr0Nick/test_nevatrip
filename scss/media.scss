@@ -1,0 +1,33 @@
+@media (min-width: 430px) {
+    .info {
+        &__title {
+            font-size: 20px;
+        }
+    }
+}
+
+@media (min-width: 700px) {
+    .block {
+        flex-direction: row;
+        &__image {
+            flex: 0 0 40%;
+        }
+        &__info {
+            flex: 0 0 60%;
+        }
+    }
+    .ibg {
+        padding-bottom: 0;
+    }
+}
+
+@media (min-width: 1070px) {
+    .event {
+        margin: 50px 0;
+    }
+    .info {
+        &__title {
+            font-size: 26px;
+        }
+    }
+}

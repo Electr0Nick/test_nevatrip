@@ -1,0 +1,126 @@
+.event {
+    margin: 26px 0;
+}
+.block {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #828282;
+    border-radius: 16px;
+    overflow: hidden;
+    &__label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 15%;
+        z-index: 6;
+        height: 35px;
+        padding: 0 20px;
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+        &_blue {
+            background-color: #099CE8;
+        }
+        &_yellow {
+            background-color: #FED74B;
+        }
+        &_purple {
+            background-color: #7553FF;
+        }
+    }
+}
+.ibg {
+    position: relative;
+    padding-bottom: 65%;
+    img {
+        position: absolute;
+        z-index: 5;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+    }
+}
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+    &__duration {
+        line-height: 20px;
+    }
+    &__durationicon {
+        margin-right: 7px;
+        color: #C7C7C7;
+        font-size: 16px;
+        vertical-align: middle;
+    }
+    &__durationtext {
+        color: #9E9E9E;
+        font-size: 12px;
+        vertical-align: middle;
+    }
+    &__title {
+        font-weight: 700;
+    }
+    &__advantagelist {
+        list-style-image: url("../img/check-mark.svg");
+    }
+    &__advantage {
+        margin-left: 25px;
+        margin-bottom: 10px;
+        span {
+            position: relative;
+            left: 15px;
+        }
+    }
+    &__timesblock {
+        display: inline-flex;
+        gap: 7px;
+        margin: 10px 0 0 15px;
+    }
+    &__time {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 64px;
+        height: 24px;
+        border-radius: 12px;
+        background-color: #D9E8FF;
+        line-height: 24px;
+        &:hover {
+            background-color: #6BA6FF;
+            color: #FFF;
+        }
+    }
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__price {
+        display: flex;
+        flex-direction: column;
+    }
+    &__mainprice {
+        font-size: 30px;
+        line-height: 30px;
+    }
+    &__otherprice {
+        font-size: 10px;
+    }
+    &__button {
+        width: 165px;
+        height: 44px;
+        border: 1px solid #CBA500;
+        border-radius: 20px;
+        background-color: #FED74B;
+        line-height: 44px;
+        text-align: center;
+        &:hover {
+            background-color: #CBA500;
+        }
+    }
+}
