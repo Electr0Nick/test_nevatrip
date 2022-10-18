@@ -16,51 +16,43 @@
     <div class="wrapper">
         <div class="container">
 
-            <form class="form">
+            <form class="calculator form" name="form" id="form">
 
-                <h1>Колькулятор поездки</h1>
-
-                <div class="form__direction">
-                    <label for="time">Направление:</label>
-                    <select class="form__choosedirection" name="route" id="route">
-                        <option value="из точки A в точку B">из точки A в точку B</option>
-                        <option value="из точки B в точку A">из точки B в точку A</option>
-                        <option value="из точки A в точку B и обратно">из точки A в точку B и обратно</option>
-                    </select>
+                <div class="form__calculator">
+                    <h1 class="form__title">Колькулятор поездки</h1>
+                    <div class="form__direction">
+                        <label for="time">Направление:</label>
+                        <select class="form__choosedirection" name="direction" id="direction">
+                            <option selected disabled>Выберите направление</option>
+                            <option value="A to B">Из точки A в точку B</option>
+                            <option value="B to A">Из точки B в точку A</option>
+                            <option value="A to B to A">Из точки A в точку B и обратно</option>
+                        </select>
+                    </div>
+                    <div class="form__time form__time_1" id="form__time_1">
+                        <label for="time1">Время отправки из точки А:</label>
+                        <select class="form__choosetime form__choosetime_1" name="time1" id="time1">
+                            <option selected disabled>Выберите время</option>
+                        </select>
+                    </div>
+                    <div class="form__time form__time_2" id="form__time_2">
+                        <label for="time2">Время отправки из точки B:</label>
+                        <select class="form__choosetime form__choosetime_2" name="time2" id="time2">
+                            <option selected disabled>Выберите время</option>
+                        </select>
+                    </div>
+                    <div class="form__amount">
+                        <label for="num">Количество билетов:</label>
+                        <input class="form__chooseamount" placeholder="Введите количество" name="amount" id="amount">
+                    </div>
+                    <button class="form__button" id="button">Посчитать</button>
+                    <label for="result">Итоговые данные поездки:</label>
+                    <textarea class="form__result" rows="6" name="result" id="result"></textarea>
                 </div>
 
-                <div class="form__time">
-                    <label for="time1">Время отправки из точки А:</label>
-                    <select class="form__choosetime form__choosetime_1" name="time1" id="time1">
-                        <option value="18:00">18:00</option>
-                        <option value="18:30">18:30</option>
-                        <option value="18:45">18:45</option>
-                        <option value="19:00">19:00</option>
-                        <option value="19:15">19:15</option>
-                        <option value="21:00">21:00</option>
-                    </select>
-
-                    <label for="time2">Время отправки из точки B:</label>
-                    <select class="form__choosetime form__choosetime_2" name="time2" id="time2">
-                        <option value="18:30">18:30</option>
-                        <option value="18:45">18:45</option>
-                        <option value="19:00">19:00</option>
-                        <option value="19:15">19:15</option>
-                        <option value="19:35">19:35</option>
-                        <option value="21:50">21:50</option>
-                        <option value="21:55">21:55</option>
-                    </select>
+                <div class="form__image ibg">
+                    <img src="img/001.jpg">
                 </div>
-
-                <div class="form__amount">
-                    <label for="num">Количество билетов:</label>
-                    <input class="form__chooseamount" id="num">
-                </div>
-
-                <button class="form__button">Посчитать</button>
-
-                <label for="result">Итоговые данные поездки:</label>
-                <textarea class="form__result" name="result" id="result"></textarea>
 
             </form>
 

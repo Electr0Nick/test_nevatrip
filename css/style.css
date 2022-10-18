@@ -221,7 +221,22 @@ body {
     font-size: 26px;
   }
 }
+.calculator {
+  margin: 26px 0;
+}
+
 .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #828282;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.form__calculator {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -229,15 +244,49 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 15px;
-  padding: 20px;
-  border: 1px solid #828282;
-  border-radius: 16px;
-  overflow: hidden;
+  gap: 20px;
+  padding: 20px 50px 20px 30px;
+}
+.form__title {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 10px 0 20px;
+}
+.form__direction {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.form__choosedirection {
+  width: 45%;
+}
+.form__time {
+  display: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.form__choosetime {
+  width: 45%;
+}
+.form__amount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.form__chooseamount {
+  width: 45%;
 }
 .form__button {
-  width: 165px;
+  width: 50%;
   height: 44px;
+  margin: 20px 0;
   border: 1px solid #CBA500;
   border-radius: 20px;
   background-color: #FED74B;
@@ -245,4 +294,18 @@ body {
 }
 .form__button:hover {
   background-color: #CBA500;
+}
+.form__result {
+  margin-bottom: 20px;
+}
+.form__image {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+}
+
+.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
