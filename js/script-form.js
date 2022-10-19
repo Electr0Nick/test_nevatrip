@@ -60,25 +60,23 @@ addOptionsToSelect(arrayUserTimeBtoA, selectBToA, 'optionBToA');
 
 // -----------add selects depending on the direction--------------------------
 let form = document.getElementById('form');
-let timeAtoB = document.getElementById('form__time_1');
-let timeBtoA = document.getElementById('form__time_2');
 let price;
 let duration;
 
 function addSelects() {
     if (form.direction.value == "A to B") {
-        timeAtoB.classList.add('active');
-        timeBtoA.classList.remove('active');
+        selectAToB.classList.add('active');
+        selectBToA.classList.remove('active');
         price = 700;
         duration = '50 минут';
     } else if (form.direction.value == "B to A") {
-        timeAtoB.classList.remove('active');
-        timeBtoA.classList.add('active');
+        selectAToB.classList.remove('active');
+        selectBToA.classList.add('active');
         price = 700;
         duration = '50 минут';
     } else if (form.direction.value == "A to B to A") {
-        timeAtoB.classList.add('active');
-        timeBtoA.classList.add('active');
+        selectAToB.classList.add('active');
+        selectBToA.classList.add('active');
         price = 1200;
         duration = '1 час 40 минут';
     }
@@ -91,6 +89,8 @@ form.direction.addEventListener('change', addSelects);
 let departureTime;
 let arrivalTime;
 let arrayOfOptions = document.getElementsByClassName("optionBToA");
+let errorField = document.getElementById('error');
+let errorMessage = ' ';
 
 function calcArrivalTime(time, duration) {
     let array = time.split(':');
@@ -150,7 +150,22 @@ form.time2.addEventListener('change', changeDepartureTime);
 
 function calculate(event) {
     event.preventDefault();
-    form.result.value = `Количество билетов: ${form.amount.value}\nМаршрут: ${form.direction.options[form.direction.selectedIndex].text}\nCтоимость: ${price * form.amount.value} ₽\nВремя отправления: ${departureTime}\nВремя прибытия: ${arrivalTime}\nВремя в пути: ${duration}`;
+    if (form.direction.selectedIndex == 0) {
+        errorMessage = 'Вы не выбрали направление!';
+    } else if (((form.direction.selectedIndex == 1 || form.direction.selectedIndex == 3) && form.time1.selectedIndex == 0) || ((form.direction.selectedIndex == 2 || form.direction.selectedIndex == 3) && form.time2.selectedIndex == 0)) {
+        errorMessage = 'Вы не выбрали время отправки!';
+    } else if (!form.amount.value) {
+        errorMessage = 'Вы не указали количество билетов!';
+    } else if (form.amount.value <= 0 || form.amount.value > 30) {
+        errorMessage = 'Введите корректное количество билетов!';
+    } else {
+        errorMessage = ' ';
+    }
+    errorField.innerHTML = errorMessage;
+    if (errorMessage == ' ') {
+        form.result.value = `Количество билетов: ${form.amount.value}\nМаршрут: ${form.direction.options[form.direction.selectedIndex].text}\nCтоимость: ${price * form.amount.value} ₽\nВремя отправления: ${departureTime}\nВремя прибытия: ${arrivalTime}\nВремя в пути: ${duration}`;
+        form.result.style.backgroundColor = '#ffedac';
+    }
 }
 
 form.addEventListener('submit', calculate);

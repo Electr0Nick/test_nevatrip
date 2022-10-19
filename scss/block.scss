@@ -32,7 +32,6 @@
 }
 .ibg {
     position: relative;
-    padding-bottom: 65%;
     img {
         position: absolute;
         z-index: 5;
@@ -41,6 +40,9 @@
         top: 0;
         left: 0;
         object-fit: cover;
+    }
+    &_b {
+        padding-bottom: 65%;
     }
 }
 .info {

@@ -34,31 +34,35 @@
                         <select class="form__choosetime form__choosetime_1" name="time1" id="time1">
                             <option selected disabled>Выберите время</option>
                         </select>
+                        <span class="form__notime">Не требуется</span>
                     </div>
                     <div class="form__time form__time_2" id="form__time_2">
                         <label for="time2">Время отправки из точки B:</label>
                         <select class="form__choosetime form__choosetime_2" name="time2" id="time2">
                             <option selected disabled>Выберите время</option>
                         </select>
+                        <span class="form__notime">Не требуется</span>
                     </div>
                     <div class="form__amount">
                         <label for="num">Количество билетов:</label>
-                        <input class="form__chooseamount" placeholder="Введите количество" name="amount" id="amount">
+                        <input class="form__chooseamount" type="number" placeholder ="Введите количество" name="amount" id="amount">
                     </div>
+                    <span class="form__error" id="error"></span>
                     <button class="form__button" id="button">Посчитать</button>
                     <label for="result">Итоговые данные поездки:</label>
-                    <textarea class="form__result" rows="6" name="result" id="result"></textarea>
+                    <textarea class="form__result" rows="7" name="result" id="result"></textarea>
                 </div>
 
-                <div class="form__image ibg">
+                <div class="form__image ibg ibg_f">
                     <img src="img/001.jpg">
                 </div>
 
             </form>
+            <a class="escape" href="index.html">На главную</a>
 
         </div>
     </div>
-    <script src="js/script.js"></script>
+    <script src="js/script-form.js"></script>
 </body>
 
 </html>

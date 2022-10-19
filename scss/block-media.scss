@@ -1,4 +1,7 @@
 @media (min-width: 430px) {
+    .ibg_b {
+        padding-bottom: 50%;
+    }
     .info {
         &__title {
             font-size: 20px;
@@ -16,8 +19,13 @@
             flex: 0 0 60%;
         }
     }
-    .ibg {
+    .ibg_b {
         padding-bottom: 0;
+    }
+    .info {
+        &__title {
+            order: -1;
+        }
     }
 }
 
