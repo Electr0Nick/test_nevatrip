@@ -80,6 +80,7 @@
     }
     &__timesblock {
         display: inline-flex;
+        flex-wrap: wrap;
         gap: 7px;
         margin: 10px 0 0 15px;
     }
