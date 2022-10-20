@@ -127,27 +127,13 @@ body {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 7px;
-  margin: 10px 0 0 15px;
+  margin: 0 0 15px 40px;
 }
 .info__time {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 64px;
-  height: 24px;
-  border-radius: 12px;
   background-color: #D9E8FF;
-  line-height: 24px;
 }
-.info__time:hover {
-  background-color: #6BA6FF;
-  color: #FFF;
+.info__more, .info__close {
+  background-color: #b6d3ff;
 }
 .info__footer {
   display: -webkit-box;
@@ -187,6 +173,23 @@ body {
 }
 .info__button:hover {
   background-color: #CBA500;
+}
+
+.timestyle {
+  width: 64px;
+  height: 24px;
+  border-radius: 10px;
+  line-height: 24px;
+  text-align: center;
+}
+.timestyle:hover {
+  background-color: #6BA6FF;
+  color: #FFF;
+  cursor: pointer;
+}
+
+.displaynone {
+  display: none;
 }
 
 .calculator {

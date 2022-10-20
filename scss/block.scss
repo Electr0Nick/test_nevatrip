@@ -82,21 +82,14 @@
         display: inline-flex;
         flex-wrap: wrap;
         gap: 7px;
-        margin: 10px 0 0 15px;
+        margin: 0 0 15px 40px;
     }
     &__time {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 64px;
-        height: 24px;
-        border-radius: 12px;
         background-color: #D9E8FF;
-        line-height: 24px;
-        &:hover {
-            background-color: #6BA6FF;
-            color: #FFF;
-        }
+    }
+    &__more,
+    &__close {
+        background-color: #b6d3ff;
     }
     &__footer {
         display: flex;
@@ -126,4 +119,19 @@
             background-color: #CBA500;
         }
     }
+}
+.timestyle {
+    width: 64px;
+    height: 24px;
+    border-radius: 10px;
+    line-height: 24px;
+    text-align: center;
+    &:hover {
+        background-color: #6BA6FF;
+        color: #FFF;
+        cursor: pointer;
+    }
+}
+.displaynone {
+    display: none;
 }
